@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box;
 }
+ul, li{
+  list-style: none;
+}
+a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #bcbbbb;
+}
 
 body {
   margin: 16px;
@@ -8,8 +16,8 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7b7b7b;
-  color: #212121;
+  background-color: #585858;
+  color: #bcbbbb;;
   line-height: 1.5;
 }
 
