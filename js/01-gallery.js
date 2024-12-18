@@ -1,7 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 // console.log(galleryItems);
-
 const ulGallery = document.querySelector('ul.gallery');
 // console.log(ulGallery);
 let oneItm;
@@ -10,7 +9,7 @@ const markUp = galleryItems.map(item => {
     return `
     <li class="gallery__item">
     <a class="gallery__link "
-    href="">
+    href="${item.original}">
     <img
       class="gallery__image "
       src="${item.preview}"
@@ -39,16 +38,25 @@ function onClickFun(event) {
 const instance = basicLightbox.create(`
     <img src="${oneItm}" width="800" height="600">
 
-`)
+`, {
+  onClose: (instance) => {
+    document.removeEventListener('keydown', keyEsc);
+  },
+  onShow: (instance) => {
+      document.addEventListener('keydown', keyEsc);
+  }
+  }
+)
   instance.show();
-
- document.addEventListener('keydown', keyEsc);
-  function keyEsc(event) {
+function keyEsc(event) {
   if (ESCAPE === event.code) {
     console.log("Hi!");
     instance.close();
   }
+}
+ 
 };
   // document.removeEventListener('keydown', keyEsc);
   
-}
+
+
