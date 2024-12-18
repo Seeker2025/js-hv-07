@@ -14,8 +14,7 @@
   list-style: none;
   margin-left: auto;
   margin-right: auto;
-  border: 5px dashed rgb(63, 124, 220);
-}
+ }
 
 .gallery__item {
   position: relative;
@@ -40,8 +39,7 @@ a.gallery__link {
   display: block;
   text-decoration: none;
   height: 100%;
-  border: 3px dashed rgb(214, 168, 53);
-}
+ }
 
 .gallery__link:hover {
   cursor: zoom-in;
