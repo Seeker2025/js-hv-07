@@ -18,3 +18,21 @@ const markUp = galleryItems.map(item => {
 }).join('');
 // console.log(markUp);
 ulGallery.insertAdjacentHTML('beforeend', markUp);
+// function bobobo(event) {
+//     event.preventDefault();
+//     console.log('boo');
+
+    // console.log(event.target.alt);
+
+    let lightbox = new SimpleLightbox('.gallery__item a.gallery__link', {
+      
+        captionsData: 'alt',
+        captionDelay: 250,
+        animationSpeed: 200,
+        scaleImageToRatio: true,
+        
+        /* options */
+});
+
+
+

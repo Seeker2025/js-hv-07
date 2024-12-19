@@ -37,7 +37,6 @@ function onClickFun(event) {
 
 const instance = basicLightbox.create(`
     <img src="${oneItm}" width="800" height="600">
-
 `, {
   onClose: (instance) => {
     document.removeEventListener('keydown', keyEsc);
